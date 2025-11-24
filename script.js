@@ -1,4 +1,4 @@
-// Мобильное меню
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -8,7 +8,6 @@ menuToggle.addEventListener('click', () => {
     menuToggle.querySelector('i').classList.toggle('fa-times');
 });
 
-// Закрытие меню при клике на ссылку
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -17,7 +16,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Фиксированный хедер при скролле
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     if (window.scrollY > 100) {
@@ -27,7 +25,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Плавная прокрутка к секциям
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -45,7 +42,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Анимация появления элементов при скролле
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -60,7 +56,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Наблюдаем за элементами для анимации
 document.querySelectorAll('.feature-card, .screenshot-item, .testimonial-card, .download-text, .download-image').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -68,7 +63,6 @@ document.querySelectorAll('.feature-card, .screenshot-item, .testimonial-card, .
     observer.observe(el);
 });
 
-// FAQ аккордеон
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const item = question.parentElement;
@@ -76,7 +70,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
-// Анимация счетчиков
 function animateCounters() {
     const counters = document.querySelectorAll('.stat h3');
     const speed = 200;
@@ -100,7 +93,6 @@ function animateCounters() {
     });
 }
 
-// Запуск анимации счетчиков при попадании в область видимости
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -115,7 +107,6 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Плавающие элементы в герой секции
 function createFloatingElements() {
     const heroSection = document.querySelector('.hero');
     const colors = ['#6c5ce7', '#a29bfe', '#fd79a8', '#00cec9'];
@@ -124,7 +115,6 @@ function createFloatingElements() {
         const floatingEl = document.createElement('div');
         floatingEl.classList.add('floating-element');
         
-        // Случайные свойства
         const size = Math.random() * 20 + 10;
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
@@ -149,10 +139,8 @@ function createFloatingElements() {
     }
 }
 
-// Создаем плавающие элементы после загрузки страницы
 window.addEventListener('load', createFloatingElements);
 
-// Анимация наведения на кнопки скачивания
 document.querySelectorAll('.btn-download').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
         this.style.animation = 'pulse 0.5s ease-in-out';
@@ -163,7 +151,6 @@ document.querySelectorAll('.btn-download').forEach(btn => {
     });
 });
 
-// Параллакс эффект для герой секции
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -174,33 +161,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Инициализация при загрузке
 document.addEventListener('DOMContentLoaded', function() {
-    // Добавляем класс для анимации при загрузке
+е
     document.querySelectorAll('.feature-card, .screenshot-item, .testimonial-card').forEach((el, index) => {
         el.style.transitionDelay = `${index * 0.1}s`;
     });
     
-    // Показываем элементы с задержкой
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
 });
 
-// Обработка формы (если будет добавлена)
 document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Здесь можно добавить отправку формы
             alert('Спасибо! Ваше сообщение отправлено.');
             form.reset();
         });
     });
 });
 
-// Добавляем эффект печатающего текста для заголовка
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -216,7 +198,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Запускаем эффект печатающего текста для главного заголовка
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-text h1');
     if (heroTitle) {
@@ -225,9 +206,9 @@ window.addEventListener('load', () => {
     }
 });
 
-// Добавляем интерактивность для скриншотов
 document.querySelectorAll('.screenshot-item').forEach(item => {
     item.addEventListener('click', function() {
         this.classList.toggle('zoomed');
     });
+
 });
