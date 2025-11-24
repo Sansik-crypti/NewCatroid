@@ -1,4 +1,4 @@
-/* Общие стили */
+
 * {
     margin: 0;
     padding: 0;
@@ -119,7 +119,6 @@ p {
     border-radius: 2px;
 }
 
-/* Навигация */
 header {
     position: fixed;
     top: 0;
@@ -200,7 +199,6 @@ header.scrolled {
     color: var(--dark);
 }
 
-/* Герой секция */
 .hero {
     height: 100vh;
     display: flex;
@@ -331,7 +329,6 @@ header.scrolled {
     animation-delay: 10s;
 }
 
-/* Возможности */
 .features {
     background: white;
 }
@@ -396,7 +393,6 @@ header.scrolled {
     margin-bottom: 15px;
 }
 
-/* Скриншоты */
 .screenshots {
     background: linear-gradient(135deg, rgba(108, 92, 231, 0.05) 0%, rgba(253, 121, 168, 0.05) 100%);
 }
@@ -431,7 +427,6 @@ header.scrolled {
     transform: scale(1.1);
 }
 
-/* Скачать */
 .download {
     background: white;
 }
@@ -500,7 +495,6 @@ header.scrolled {
     box-shadow: var(--shadow);
 }
 
-/* Отзывы */
 .testimonials {
     background: linear-gradient(135deg, rgba(108, 92, 231, 0.05) 0%, rgba(253, 121, 168, 0.05) 100%);
 }
@@ -552,7 +546,6 @@ header.scrolled {
     font-size: 0.9rem;
 }
 
-/* FAQ */
 .faq {
     background: white;
 }
@@ -613,7 +606,6 @@ header.scrolled {
     max-height: 200px;
 }
 
-/* Контакты */
 .contact {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     color: white;
@@ -665,7 +657,6 @@ header.scrolled {
     color: var(--secondary);
 }
 
-/* Футер */
 footer {
     background: var(--dark);
     color: white;
@@ -747,7 +738,6 @@ footer {
     font-size: 14px;
 }
 
-/* Анимации */
 @keyframes fadeUp {
     to {
         opacity: 1;
@@ -773,7 +763,6 @@ footer {
     }
 }
 
-/* Адаптивность */
 @media (max-width: 992px) {
     .hero-content,
     .download-content {
@@ -864,4 +853,5 @@ footer {
         width: 250px;
         height: 500px;
     }
+
 }
